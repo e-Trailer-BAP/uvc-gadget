@@ -48,6 +48,8 @@ ldconfig
 # Copy the new startup script to home directory and make it executable
 cp "$NEW_STARTUP_SCRIPT_PATH" /home/pi/.rpi-uvc-gadget.sh
 chmod +x /home/pi/.rpi-uvc-gadget.sh
+chmod +x /home/pi/uvc-gadget/update_cam.sh
+
 
 # Add the script to rc.local for execution at boot
 sed -i '/exit 0/i /home/pi/.rpi-uvc-gadget.sh &' /etc/rc.local
