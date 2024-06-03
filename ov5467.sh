@@ -55,7 +55,7 @@ create_uvc() {
 166667
 111111
 "
-	create_frame $FUNCTION 1280 720 uncompressed u "2000000
+	create_frame $FUNCTION 1280 960 uncompressed u "2000000
 1000000
 666667
 500000
@@ -65,7 +65,7 @@ create_uvc() {
 200000
 166667
 "
-	create_frame $FUNCTION 1920 1080 uncompressed u "2000000
+	create_frame $FUNCTION 1920 1440 uncompressed u "2000000
 1000000
 666667
 500000
@@ -88,7 +88,7 @@ create_uvc() {
 166667
 111111
 "
-	create_frame $FUNCTION 1280 720 mjpeg m "2000000
+	create_frame $FUNCTION 1280 960 mjpeg m "2000000
 1000000
 666667
 500000
@@ -98,7 +98,7 @@ create_uvc() {
 200000
 166667
 "
-	create_frame $FUNCTION 1920 1080 mjpeg m "2000000
+	create_frame $FUNCTION 1920 1440 mjpeg m "2000000
 1000000
 666667
 500000
