@@ -51,32 +51,33 @@ create_uvc() {
 416667
 400000
 333333
-200000
-166667
-111111
 "
-	create_frame $FUNCTION 1280 960 uncompressed u "2000000
-1000000
-666667
-500000
-416667
-400000
-333333
-200000
-166667
-"
-	create_frame $FUNCTION 1920 1440 uncompressed u "2000000
-1000000
-666667
-500000
-416667
-400000
-333333
-"
-	create_frame $FUNCTION 2592 1944 uncompressed u "2000000
-1000000
-666667
-"
+# 200000 50fps
+# 166667 60fps
+# 111111 90fps
+
+# 	create_frame $FUNCTION 1280 960 uncompressed u "2000000
+# 1000000
+# 666667
+# 500000
+# 416667
+# 400000
+# 333333
+# 200000
+# 166667
+# "
+# 	create_frame $FUNCTION 1920 1440 uncompressed u "2000000
+# 1000000
+# 666667
+# 500000
+# 416667
+# 400000
+# 333333
+# "
+# 	create_frame $FUNCTION 2592 1944 uncompressed u "2000000
+# 1000000
+# 666667
+# "
 	create_frame $FUNCTION 640 480 mjpeg m "2000000
 1000000
 666667
@@ -84,32 +85,33 @@ create_uvc() {
 416667
 400000
 333333
-200000
-166667
-111111
 "
-	create_frame $FUNCTION 1280 960 mjpeg m "2000000
-1000000
-666667
-500000
-416667
-400000
-333333
-200000
-166667
-"
-	create_frame $FUNCTION 1920 1440 mjpeg m "2000000
-1000000
-666667
-500000
-416667
-400000
-333333
-"
-	create_frame $FUNCTION 2592 1944 mjpeg m "2000000
-1000000
-666667
-"
+# 200000 50fps
+# 166667 60fps
+# 111111 90fps
+
+# 	create_frame $FUNCTION 1280 960 mjpeg m "2000000
+# 1000000
+# 666667
+# 500000
+# 416667
+# 400000
+# 333333
+# 200000
+# 166667
+# "
+# 	create_frame $FUNCTION 1920 1440 mjpeg m "2000000
+# 1000000
+# 666667
+# 500000
+# 416667
+# 400000
+# 333333
+# "
+# 	create_frame $FUNCTION 2592 1944 mjpeg m "2000000
+# 1000000
+# 666667
+# "
 
 	mkdir functions/$FUNCTION/streaming/header/h
 	cd functions/$FUNCTION/streaming/header/h
