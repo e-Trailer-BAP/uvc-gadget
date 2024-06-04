@@ -10,7 +10,9 @@ fi
 apt update && apt full-upgrade -y
 
 # Install required packages
-apt install -y git meson libcamera-dev libjpeg-dev
+apt install -y git meson libcamera-dev libjpeg-dev libopencv-dev v4l2loopback-dkms cmake libyaml-cpp-dev
+modprobe v4l2loopback devices=1 video_nr=10 card_label="Virtual Camera" exclusive_caps=1
+
 
 # Clone UVC gadget repository
 cd /home/pi
