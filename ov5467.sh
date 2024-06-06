@@ -29,7 +29,7 @@ create_frame() {
 	mkdir -p $wdir
 	echo $WIDTH > $wdir/wWidth
 	echo $HEIGHT > $wdir/wHeight
-	echo $(( $WIDTH * $HEIGHT * 2 )) > $wdir/dwMaxVideoFrameBufferSize
+	# echo $(( $WIDTH * $HEIGHT * 2 )) > $wdir/dwMaxVideoFrameBufferSize
 	cat <<EOF > $wdir/dwFrameInterval
 $6
 EOF
