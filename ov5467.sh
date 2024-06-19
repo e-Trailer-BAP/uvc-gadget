@@ -63,9 +63,9 @@ create_uvc() {
 200000
 "
 
-	create_frame $FUNCTION 1920 1440 mjpeg m "333333
-200000
-"
+# 	create_frame $FUNCTION 1920 1440 mjpeg m "333333
+# 200000
+# "
 
 
 	mkdir functions/$FUNCTION/streaming/header/h
