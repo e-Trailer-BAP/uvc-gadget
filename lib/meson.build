@@ -15,9 +15,6 @@ libuvcgadget_sources = files([
   'video-source.c',
 ])
 
-# Find OpenCV package
-opencv_dep = dependency('opencv4', required: true)
-
 if libcamera.found()
   libuvcgadget_sources += files(['libcamera-source.cpp'])
 endif
@@ -28,7 +25,7 @@ endif
 
 libuvcgadget = shared_library('uvcgadget',
                               libuvcgadget_sources,
-                              dependencies : [libcamera, libjpeg, threads, opencv_dep],
+                              dependencies : [libcamera, libjpeg, threads],
                               version : uvc_gadget_version,
                               install : true,
                               include_directories : [includes, config_includes])

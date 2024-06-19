@@ -10,9 +10,7 @@ fi
 apt update && apt full-upgrade -y
 
 # Install required packages
-apt install -y git meson libcamera-dev libjpeg-dev libopencv-dev v4l2loopback-dkms cmake libyaml-cpp-dev
-modprobe v4l2loopback devices=1 video_nr=10 card_label="Virtual Camera" exclusive_caps=1
-
+apt install -y git meson libcamera-dev libjpeg-dev
 
 # Clone UVC gadget repository
 cd /home/pi
@@ -48,7 +46,7 @@ meson install
 ldconfig
 
 # Copy the new startup script to home directory and make it executable
-cp "$NEW_STARTUP_SCRIPT_PATH" /home/pi/.rpi-uvc-gadget.sh
+cp "$NEW_STARTUP_SCRIPT_PATH" /home/pi/ov5467.sh
 chmod +x /home/pi/.rpi-uvc-gadget.sh
 chmod +x /home/pi/uvc-gadget/update_cam.sh
 
