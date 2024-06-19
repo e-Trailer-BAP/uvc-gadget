@@ -18,7 +18,7 @@ git clone https://github.com/e-Trailer-BAP/uvc-gadget.git
 
 # Define paths to the new config.txt and startup script
 NEW_CONFIG_PATH="/home/pi/uvc-gadget/config.txt"
-NEW_STARTUP_SCRIPT_PATH="/home/pi/uvc-gadget/.rpi-uvc-gadget.sh"
+NEW_STARTUP_SCRIPT_PATH="/home/pi/uvc-gadget/ov5467.sh"
 
 # Check if the new config file exists
 if [ ! -f "$NEW_CONFIG_PATH" ]; then
@@ -46,7 +46,7 @@ meson install
 ldconfig
 
 # Copy the new startup script to home directory and make it executable
-cp "$NEW_STARTUP_SCRIPT_PATH" /home/pi/ov5467.sh
+cp "$NEW_STARTUP_SCRIPT_PATH" /home/pi/.rpi-uvc-gadget.sh
 chmod +x /home/pi/.rpi-uvc-gadget.sh
 chmod +x /home/pi/uvc-gadget/update_cam.sh
 
