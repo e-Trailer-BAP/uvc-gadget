@@ -11,7 +11,7 @@ The `uvcgadget` is a pure C library designed for handling UVC (USB Video Class) 
 1. Download and install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 2. Select 'Raspberry Pi Zero 2 W' as the target device.
 3. Choose 'Raspberry Pi OS (Legacy) Lite: 64-bit Bullseye' as the operating system.
-4. In the imager's settings, enable SSH and configure both network settings and the user account.
+4. Select the correct MicroSD device and when prompted to adjust the settings, enable SSH and configure both network settings and the user account.
 5. Flash the MicroSD card with the configured OS.
 
 ### Installation
