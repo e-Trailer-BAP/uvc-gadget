@@ -1,28 +1,39 @@
-# uvcgadget - UVC gadget C library
 
-uvcgadget is a pure C library that implements handling of UVC gadget functions.
+# uvcgadget - UVC Gadget C Library
 
-## Utilities
+The `uvcgadget` is a pure C library designed for handling UVC (USB Video Class) gadget functions on Raspberry Pi Zero 2 W devices. It facilitates the transformation of the Pi into a UVC-compatible device.
 
-- uvc-gadget - Sample test application
+## How to use?
 
-## Build instructions:
 
-To compile:
+### Preparation
 
-```
-$ meson build
-$ ninja -C build
-```
+1. Download and install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+2. Select 'Raspberry Pi Zero 2 W' as the target device.
+3. Choose 'Raspberry Pi OS (Legacy) Lite: 64-bit Bullseye' as the operating system.
+4. In the imager's settings, enable SSH and configure both network settings and the user account.
+5. Flash the MicroSD card with the configured OS.
 
-## Cross compiling instructions:
+### Installation
 
-Cross compilation can be managed by meson. Please read the directions at
-https://mesonbuild.com/Cross-compilation.html for detailed guidance on using
-meson.
+1. SSH into your Pi using the previously configured settings:
+   - You can use the terminal or command prompt with the command:
+     ```
+     ssh <user>@<host> -p <port> (default port is 22)
+     ```
+   - Alternatively, use an SSH client like [PuTTY](https://www.putty.org/).
+2. After establishing an SSH connection, execute the following commands to install the `uvcgadget` library:
+   ```bash
+   sudo apt install -y git;
+   sudo mkdir -p /home/pi;
+   sudo cd /home/pi;
+   sudo git clone https://github.com/e-Trailer-BAP/uvc-gadget.git;
+   sudo chmod +x ./uvc-gadget/setup.sh;
+   sudo ./uvc-gadget/setup.sh
+   ```
+  3. Once the installation completes, the device will reboot. Afterwards, connect a micro USB cable to the micro USB port labeled 'USB' on your Pi and connect the other end to your host device. The Pi will now function as a UVC device.
 
-In brief summary:
-```
-$ meson build --cross <meson cross file>
-$ ninja -C build
-```
+# To be Done
+
+ - Implement Undistortion from [uvc-undistort](https://github.com/e-Trailer-BAP/uvc-undistort) before video is output.
+- Implement first time calibration script to set intrinsic parameters
